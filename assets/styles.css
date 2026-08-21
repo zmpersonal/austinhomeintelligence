@@ -124,3 +124,54 @@ body.assessment-focus .assessment-card{margin-top:0}
 
 @media(max-width:900px){.split-story,.source-layout{grid-template-columns:1fr}.benefit-grid,.live-dashboard{grid-template-columns:1fr 1fr}.context-grid,.guide-grid,.method-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.split-story{gap:28px}.benefit-grid,.input-separation,.live-dashboard,.context-grid,.guide-grid,.method-grid{grid-template-columns:1fr}.home-task-board{transform:none}.dashboard-card{min-height:0}.source-layout{gap:28px}body.assessment-focus .tool-shell{padding-top:10px}body.assessment-focus .tool-wrap{width:min(100% - 18px,940px)}.confirmation-map,.confirmation-map iframe,.confirmation-map .leaflet-map{min-height:245px;height:245px}.first-look-intro h3{font-size:22px}}
+
+/* 2026-08-21 tool-page conversion architecture (hvac.html reference template) */
+body.assessment-focus .marketing-section{display:none!important}
+
+.reassurance-strip{background:#edf3ef;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.reassurance-items{display:flex;justify-content:center;gap:10px 26px;flex-wrap:wrap;padding:15px 0;font-size:13px;font-weight:760;color:#3a4b45}
+.reassurance-items span{display:inline-flex;align-items:center;gap:7px}
+.reassurance-items span:before{content:"✓";color:#2c8a5e;font-weight:900}
+
+.hero-report-mock{background:var(--forest);border-radius:32px;padding:28px;color:#fff;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+.hero-report-mock:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(185,223,120,.18),rgba(220,232,223,0) 70%);right:-90px;top:-90px}
+.report-mock-label{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#b8cec6;font-weight:850;position:relative}
+.report-mock-chip{display:inline-flex;margin:11px 0;padding:6px 10px;border-radius:999px;font-size:10px;font-weight:900;letter-spacing:.07em;text-transform:uppercase;background:#fde4dd;color:#8f3923;position:relative}
+.hero-report-mock h3{font-size:26px;margin:4px 0 10px;letter-spacing:-.02em;position:relative}
+.hero-report-mock>p{color:#c8d8d2;margin:0 0 16px;font-size:14px;line-height:1.55;position:relative}
+.report-mock-next{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:12px 14px;font-size:13px;color:#fff;position:relative}
+.report-mock-next strong{display:block;font-size:10px;color:var(--lime);text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}
+
+.evidence-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.evidence-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px}
+.evidence-top{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:2px}
+.evidence-top small{font-size:9px;text-transform:uppercase;letter-spacing:.1em;font-weight:900;color:#71807a}
+.evidence-card h3{font-size:19px;margin:8px 0 6px}
+.evidence-card>p{font-size:12.5px;color:var(--muted);margin:6px 0}
+.evidence-affects,.evidence-not{border-radius:12px;padding:10px 12px;font-size:12.5px;margin-top:8px;line-height:1.5}
+.evidence-affects{background:#eef5f0;color:#285c43}
+.evidence-not{background:#f7f4ee;color:#7a6c52}
+.evidence-affects strong,.evidence-not strong{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}
+
+.status-chip{display:inline-flex;padding:5px 9px;border-radius:999px;font-size:9px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.status-chip.status-building{background:#fff0cf;color:#76530c}
+.status-chip.status-live{background:#e5f1e9;color:#285c43}
+.building-card{background:linear-gradient(135deg,#123f34,#0b2f27);color:#fff;border-radius:28px;padding:32px;display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
+.building-card h3{font-size:27px;margin:9px 0 10px;color:#fff;letter-spacing:-.02em}
+.building-card p{color:#c8d8d2;margin:0 0 12px;font-size:14px;line-height:1.6}
+.building-list{display:grid;gap:9px;margin:0;padding:0}
+.building-list li{list-style:none;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:11px 13px;font-size:12.5px;color:#e2ece8}
+
+.sticky-cta-bar{display:none}
+body.has-sticky-cta.assessment-focus .sticky-cta-bar{display:none!important}
+@media(max-width:900px){
+  body.has-sticky-cta{padding-bottom:70px}
+  .sticky-cta-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(246,242,233,.97);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 14px;box-shadow:0 -10px 30px rgba(18,63,52,.12)}
+  .sticky-cta-bar .btn{width:100%}
+}
+@media(max-width:620px){.evidence-grid{grid-template-columns:1fr}.building-card{grid-template-columns:1fr}}
+
+/* When .tool-shell is embedded as one section of a longer page (not the whole <main>),
+   it shouldn't be forced to fill the remaining viewport height. */
+section.tool-shell{min-height:0}
+body.assessment-focus section.tool-shell{min-height:100vh}
