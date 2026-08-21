@@ -1,0 +1,9 @@
+service_category,service_name,unit,low_price,typical_price,high_price,scope_notes,source_vendor_count,last_updated
+hvac,Diagnostic visit,visit,,,,,,
+plumbing,Diagnostic visit,visit,,,,,,
+pest-control,Initial pest inspection,visit,,,,,,
+tree-service,Tree trimming,job,,,,,,
+duct-cleaning,Duct inspection,visit,,,,,,
+moisture-water,Moisture evaluation,visit,,,,,,
+pool-service,Pool diagnostic,visit,,,,,,
+home-insurance,Policy review,review,,,,,,
