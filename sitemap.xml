@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://austinhomeintelligence.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://austinhomeintelligence.com/whole-home.html</loc><priority>0.9</priority></url>
-  <url><loc>https://austinhomeintelligence.com/hvac.html</loc><priority>0.9</priority></url>
-  <url><loc>https://austinhomeintelligence.com/plumbing.html</loc><priority>0.9</priority></url>
-  <url><loc>https://austinhomeintelligence.com/pest.html</loc><priority>0.9</priority></url>
-  <url><loc>https://austinhomeintelligence.com/tree.html</loc><priority>0.9</priority></url>
-  <url><loc>https://austinhomeintelligence.com/ducts.html</loc><priority>0.9</priority></url>
-  <url><loc>https://austinhomeintelligence.com/moisture.html</loc><priority>0.9</priority></url>
-  <url><loc>https://austinhomeintelligence.com/pool.html</loc><priority>0.9</priority></url>
-  <url><loc>https://austinhomeintelligence.com/insurance.html</loc><priority>0.9</priority></url>
+<url><loc>https://austinhomeintelligence.com/</loc><lastmod>2026-08-21</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+<url><loc>https://austinhomeintelligence.com/whole-home.html</loc><lastmod>2026-08-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://austinhomeintelligence.com/hvac.html</loc><lastmod>2026-08-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://austinhomeintelligence.com/plumbing.html</loc><lastmod>2026-08-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://austinhomeintelligence.com/pest.html</loc><lastmod>2026-08-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://austinhomeintelligence.com/tree.html</loc><lastmod>2026-08-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://austinhomeintelligence.com/ducts.html</loc><lastmod>2026-08-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://austinhomeintelligence.com/moisture.html</loc><lastmod>2026-08-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://austinhomeintelligence.com/pool.html</loc><lastmod>2026-08-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://austinhomeintelligence.com/insurance.html</loc><lastmod>2026-08-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://austinhomeintelligence.com/privacy.html</loc><lastmod>2026-08-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://austinhomeintelligence.com/disclaimer.html</loc><lastmod>2026-08-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://austinhomeintelligence.com/guides/</loc><lastmod>2026-08-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://austinhomeintelligence.com/data/</loc><lastmod>2026-08-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://austinhomeintelligence.com/methodology/</loc><lastmod>2026-08-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://austinhomeintelligence.com/guides/protected-tree-permit-austin.html</loc><lastmod>2026-08-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://austinhomeintelligence.com/guides/austin-watering-restrictions.html</loc><lastmod>2026-08-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://austinhomeintelligence.com/guides/texas-mold-testing-remediation-rules.html</loc><lastmod>2026-08-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://austinhomeintelligence.com/guides/texas-burst-pipe-insurance-claim.html</loc><lastmod>2026-08-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://austinhomeintelligence.com/guides/texas-roof-claim-coverage.html</loc><lastmod>2026-08-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://austinhomeintelligence.com/guides/austin-hvac-permit-guide.html</loc><lastmod>2026-08-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://austinhomeintelligence.com/guides/do-austin-homes-need-air-duct-cleaning.html</loc><lastmod>2026-08-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://austinhomeintelligence.com/guides/austin-water-damage-first-24-hours.html</loc><lastmod>2026-08-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://austinhomeintelligence.com/guides/austin-fire-smoke-first-72-hours.html</loc><lastmod>2026-08-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://austinhomeintelligence.com/guides/austin-seasonal-home-risk-calendar.html</loc><lastmod>2026-08-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

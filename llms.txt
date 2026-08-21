@@ -1,0 +1,25 @@
+# Austin Home Intelligence
+> Austin-specific home risk, maintenance, permit, insurance and service intelligence.
+
+## Core tools
+- https://austinhomeintelligence.com/whole-home.html — Whole-home risk assessment
+- https://austinhomeintelligence.com/hvac.html — AC Life Check
+- https://austinhomeintelligence.com/plumbing.html — Plumbing Risk Check
+- https://austinhomeintelligence.com/tree.html — Tree Risk Check
+- https://austinhomeintelligence.com/moisture.html — Moisture Risk Check
+- https://austinhomeintelligence.com/insurance.html — Insurance Checkup
+
+## Research
+- https://austinhomeintelligence.com/guides/ — Source-linked homeowner guides
+- https://austinhomeintelligence.com/data/ — Public data registry and live risk signals
+- https://austinhomeintelligence.com/methodology/ — Risk, data and commercial methodology
+- https://austinhomeintelligence.com/guides/protected-tree-permit-austin.html — Austin Protected Tree Permit Guide
+- https://austinhomeintelligence.com/guides/austin-watering-restrictions.html — Austin Watering Restrictions: Current Homeowner Guide
+- https://austinhomeintelligence.com/guides/texas-mold-testing-remediation-rules.html — Texas Mold Testing vs. Remediation Rules
+- https://austinhomeintelligence.com/guides/texas-burst-pipe-insurance-claim.html — Texas Burst-Pipe Insurance Claim Guide
+- https://austinhomeintelligence.com/guides/texas-roof-claim-coverage.html — Texas Roof Insurance Claims: Coverage, Deductibles and ACV vs. Replacement Cost
+- https://austinhomeintelligence.com/guides/austin-hvac-permit-guide.html — Austin HVAC Permit Guide for Homeowners
+- https://austinhomeintelligence.com/guides/do-austin-homes-need-air-duct-cleaning.html — Do Austin Homes Need Air Duct Cleaning?
+- https://austinhomeintelligence.com/guides/austin-water-damage-first-24-hours.html — Austin Water Damage: What to Do in the First 24 Hours
+- https://austinhomeintelligence.com/guides/austin-fire-smoke-first-72-hours.html — Austin Fire & Smoke Damage: First 72 Hours
+- https://austinhomeintelligence.com/guides/austin-seasonal-home-risk-calendar.html — Austin Seasonal Home Risk Calendar

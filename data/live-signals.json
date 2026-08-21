@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-08-21T00:00:00-05:00",
+  "generated_at_display": "Initial seasonal baseline",
+  "location": "Austin, Texas",
+  "risks": {
+    "heat": {
+      "value": "Seasonal",
+      "level": "Elevated in hot weather"
+    },
+    "freeze": {
+      "value": "Seasonal",
+      "level": "Low unless forecast triggers"
+    },
+    "rain": {
+      "value": "Forecast-linked",
+      "level": "Monitor NWS"
+    },
+    "wind": {
+      "value": "Forecast-linked",
+      "level": "Monitor NWS"
+    }
+  },
+  "sources": [
+    "https://api.weather.gov/",
+    "https://www.weather.gov/ewx/"
+  ]
+}

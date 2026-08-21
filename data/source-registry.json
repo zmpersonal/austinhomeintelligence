@@ -1,0 +1,90 @@
+{
+  "updated": "2026-08-21",
+  "geography": "Austin, Texas and relevant Texas/federal jurisdictions",
+  "sources": [
+    {
+      "name": "City of Austin Issued Construction Permits",
+      "organization": "City of Austin",
+      "topic": "Permits",
+      "url": "https://data.austintexas.gov/Building-and-Development/Issued-Construction-Permits/3syk-w9eu",
+      "machine_readable": true
+    },
+    {
+      "name": "City Arborist",
+      "organization": "City of Austin",
+      "topic": "Trees",
+      "url": "https://www.austintexas.gov/development-services/city-arborist",
+      "machine_readable": false
+    },
+    {
+      "name": "Austin Water Conservation",
+      "organization": "Austin Water",
+      "topic": "Watering restrictions",
+      "url": "https://www.austintexas.gov/department/water-conservation",
+      "machine_readable": false
+    },
+    {
+      "name": "National Weather Service Austin/San Antonio",
+      "organization": "NOAA/NWS",
+      "topic": "Weather",
+      "url": "https://www.weather.gov/ewx/",
+      "machine_readable": true
+    },
+    {
+      "name": "NWS API",
+      "organization": "NOAA/NWS",
+      "topic": "Forecasts and alerts",
+      "url": "https://api.weather.gov/",
+      "machine_readable": true
+    },
+    {
+      "name": "Texas Mold Program",
+      "organization": "TDLR",
+      "topic": "Mold licensing",
+      "url": "https://www.tdlr.texas.gov/mld/",
+      "machine_readable": false
+    },
+    {
+      "name": "Texas Department of Insurance Home Guidance",
+      "organization": "TDI",
+      "topic": "Insurance",
+      "url": "https://www.tdi.texas.gov/tips/index.html",
+      "machine_readable": false
+    },
+    {
+      "name": "EPA Air Duct Cleaning Guidance",
+      "organization": "US EPA",
+      "topic": "Indoor air / ducts",
+      "url": "https://www.epa.gov/indoor-air-quality-iaq/should-you-have-air-ducts-your-home-cleaned",
+      "machine_readable": false
+    },
+    {
+      "name": "US Drought Monitor",
+      "organization": "NDMC/USDA/NOAA",
+      "topic": "Drought",
+      "url": "https://droughtmonitor.unl.edu/",
+      "machine_readable": true
+    },
+    {
+      "name": "Texas A&M AgriLife Extension",
+      "organization": "Texas A&M",
+      "topic": "Pests and landscape",
+      "url": "https://agrilifeextension.tamu.edu/",
+      "machine_readable": false
+    },
+    {
+      "name": "FEMA Flood Map Service Center",
+      "organization": "FEMA",
+      "topic": "Flood",
+      "url": "https://msc.fema.gov/portal/home",
+      "machine_readable": true
+    },
+    {
+      "name": "US Census ACS",
+      "organization": "US Census Bureau",
+      "topic": "Housing stock",
+      "url": "https://www.census.gov/data/developers/data-sets/acs-5year.html",
+      "machine_readable": true
+    }
+  ]
+}
