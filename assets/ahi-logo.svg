@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Austin Home Intelligence emblem">
+  <defs>
+    <linearGradient id="badge" x1="18" y1="8" x2="108" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1d6754"/>
+      <stop offset="0.48" stop-color="#123f34"/>
+      <stop offset="1" stop-color="#082a23"/>
+    </linearGradient>
+    <linearGradient id="warm" x1="26" y1="29" x2="101" y2="91" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f6c96b"/>
+      <stop offset="0.55" stop-color="#f08a54"/>
+      <stop offset="1" stop-color="#e96d48"/>
+    </linearGradient>
+    <linearGradient id="cool" x1="28" y1="102" x2="103" y2="68" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d9f2dc"/>
+      <stop offset="0.55" stop-color="#9cd2bc"/>
+      <stop offset="1" stop-color="#5ea68b"/>
+    </linearGradient>
+    <radialGradient id="windowGlow">
+      <stop offset="0" stop-color="#ffeaa0"/>
+      <stop offset="0.6" stop-color="#f6c66b"/>
+      <stop offset="1" stop-color="#e98a4c"/>
+    </radialGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#082a23" flood-opacity=".24"/>
+    </filter>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <path d="M64 6c22.5 0 47.5 14.4 54.2 35.2 6.9 21.4-1.9 53.9-19.9 67.1C81 121 47 123.1 27.7 109.3 9.5 96.2 3.5 64.4 11.1 42.7 18.4 21.9 41.2 6 64 6Z" fill="url(#badge)"/>
+  <path d="M64 13.5c19.6 0 41.3 12.5 47.1 30.6 6 18.7-1.7 46.9-17.3 58.4-15 11-44.6 12.9-61.4.9C16.6 92 11.4 64.3 18 45.4 24.3 27.2 44.2 13.5 64 13.5Z" fill="none" stroke="#ffffff" stroke-opacity=".12" stroke-width="1.5"/>
+
+  <!-- warm upper orbit -->
+  <path d="M20.5 69.5C28.5 37 55.5 19.7 86 25.8c14.2 2.8 24.9 10.1 31.2 18.5" fill="none" stroke="url(#warm)" stroke-width="7" stroke-linecap="round"/>
+  <!-- cool lower orbit -->
+  <path d="M18.7 77.8c14.8 25.4 48.5 36.4 75.7 22.8 11.2-5.6 19.5-14.6 23.8-25.8" fill="none" stroke="url(#cool)" stroke-width="6.5" stroke-linecap="round"/>
+
+  <!-- house -->
+  <path d="M39 61.5 64 41l25 20.5v27.7c0 3.2-2.6 5.8-5.8 5.8H44.8a5.8 5.8 0 0 1-5.8-5.8V61.5Z" fill="#f8f5ed"/>
+  <path d="M33.7 65.1 64 40.1l30.3 25" fill="none" stroke="#f8f5ed" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M81.5 47.5V37.4h8.2v16.9" fill="#f8f5ed"/>
+  <!-- window -->
+  <rect x="53.1" y="69.1" width="21.8" height="20.5" rx="4.2" fill="url(#windowGlow)"/>
+  <path d="M64 70.7v17.1M54.8 79.3h18.4" stroke="#fff7d9" stroke-width="2.1" stroke-linecap="round" opacity=".82"/>
+
+  <!-- Texas five-point star -->
+  <path d="m32.5 30.4 3.3 7.7 8.3.7-6.3 5.5 2 8.1-7.3-4.3-7.2 4.3 1.9-8.1-6.3-5.5 8.4-.7 3.2-7.7Z" fill="#ffd66f" stroke="#fff2c2" stroke-width="1.2" stroke-linejoin="round"/>
+  <circle cx="32.5" cy="41.2" r="16" fill="none" stroke="#ffd66f" stroke-opacity=".12" stroke-width="1.5"/>
+</svg>
