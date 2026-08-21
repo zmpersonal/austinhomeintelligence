@@ -127,14 +127,21 @@
 
   function renderSignalCards(el,signals){
     if(!el)return;
-    const seasonal=signals?.seasonal?.currentTop?.[0];const cards=[];
-    if(seasonal)cards.push(`<div class="signal-card"><small>Next 30–90 days</small><strong>${escapeHtml(seasonal.label)}</strong><span class="risk-chip ${levelClass(seasonal.level)}">${levelName(seasonal.level)}</span><p>Austin seasonal baseline; your answers refine this.</p></div>`);
-    if(signals?.weather)cards.push(`<div class="signal-card"><small>Live weather signal</small><strong>${escapeHtml(signals.weather.label)}</strong><span class="risk-chip ${signals.weather.level}">${signals.weather.level==='high'?'High':signals.weather.level==='med'?'Watch':'Low'}</span><p>NWS 7-day forecast near this property.</p></div>`);
-    else cards.push(`<div class="signal-card"><small>Live weather signal</small><strong>Checking local forecast</strong><span class="risk-chip low">Context</span><p>Live data appears when the address can be geocoded.</p></div>`);
-    if(signals?.permits)cards.push(`<div class="signal-card"><small>Public permit search</small><strong>${signals.permits.count} recent matches</strong><span class="risk-chip low">City data</span><p>Address search against Austin's issued-permit dataset.</p></div>`);
-    else cards.push(`<div class="signal-card"><small>Public records</small><strong>Permit history check</strong><span class="risk-chip low">City data</span><p>Available for Austin addresses when the city dataset returns a match.</p></div>`);
-    if(signals?.wildfire?.matched)cards.push(`<div class="signal-card"><small>Wildfire planning layer</small><strong>Mapped area match</strong><span class="risk-chip med">Review</span><p>${escapeHtml(signals.wildfire.name||'City of Austin mapped wildfire area')}</p></div>`);
-    el.innerHTML=cards.slice(0,4).join('');
+    const seasonal=signals?.seasonal?.currentTop?.[0];
+    const seasonLabel=seasonal?.label||'Austin seasonal conditions';
+    const seasonLevel=seasonal?.level??1;
+    const weather=signals?.weather;
+    const permitCount=signals?.permits?.count;
+    const seasonCopy=seasonLabel.toLowerCase().includes('ac')||seasonLabel.toLowerCase().includes('heat')
+      ? 'Austin heat can put extra strain on cooling systems. Your answers about age, performance and repairs will tell us whether that matters for your home.'
+      : 'Austin seasonal conditions can change which parts of a home deserve more attention. Your answers will tell us whether that matters for this property.';
+    const weatherCopy=weather
+      ? `${escapeHtml(weather.label)}. We factor current heat, storms, rain and freeze conditions into context when they could change what deserves attention.`
+      : 'We’ll factor in current heat, storms, rain and freeze conditions when they could change what deserves attention.';
+    const permitCopy=Number.isFinite(permitCount)
+      ? (permitCount>0 ? `${permitCount} recent public-record match${permitCount===1?'':'es'} found for this address search. We’ll use relevant records as context, not as proof of current condition.` : 'No recent exact address match appeared in this quick search. Where records are available, permit history can add context about work previously done on the property.')
+      : 'Where records are available, we’ll look for relevant Austin permits that may add context about work previously done on the property.';
+    el.innerHTML=`<div class="signal-card"><small>Seasonal risk</small><strong>${escapeHtml(seasonLabel)}</strong><span class="risk-chip ${levelClass(seasonLevel)}">${levelName(seasonLevel)}</span><p>${seasonCopy}</p></div><div class="signal-card"><small>Live local conditions</small><strong>Weather affecting your home</strong><span class="risk-chip ${weather?.level||'low'}">${weather?.level==='high'?'High':weather?.level==='med'?'Watch':'Context'}</span><p>${weatherCopy}</p></div><div class="signal-card"><small>Public property data</small><strong>Permit & improvement history</strong><span class="risk-chip low">City data</span><p>${permitCopy}</p></div>`;
   }
 
   function sixMonthHtml(){const o=seasonalOutlook();return o.period.map(p=>{const x=p.top[0];return `<div class="signal-card"><small>${p.month}</small><strong>${escapeHtml(x.label)}</strong><span class="risk-chip ${levelClass(x.level)}">${levelName(x.level)}</span></div>`}).join('')}
