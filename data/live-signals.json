@@ -1,27 +1,29 @@
 {
-  "generated_at": "2026-08-21T00:00:00-05:00",
-  "generated_at_display": "Initial seasonal baseline",
+  "generated_at": "2026-08-21T21:32:16.831342+00:00",
+  "generated_at_display": "Aug 21, 2026 21:32 UTC",
   "location": "Austin, Texas",
+  "window": "NWS forecast periods, approximately 7 days",
   "risks": {
     "heat": {
-      "value": "Seasonal",
-      "level": "Elevated in hot weather"
+      "value": "105\u00b0F max",
+      "level": "High"
     },
     "freeze": {
-      "value": "Seasonal",
-      "level": "Low unless forecast triggers"
+      "value": "79\u00b0F min",
+      "level": "Low"
     },
     "rain": {
-      "value": "Forecast-linked",
-      "level": "Monitor NWS"
+      "value": "15% peak",
+      "level": "Low"
     },
     "wind": {
-      "value": "Forecast-linked",
-      "level": "Monitor NWS"
+      "value": "10 mph max",
+      "level": "Low"
     }
   },
   "sources": [
-    "https://api.weather.gov/",
+    "https://api.weather.gov/points/30.2672,-97.7431",
     "https://www.weather.gov/ewx/"
-  ]
+  ],
+  "limitations": "These are near-term environmental signals, not predictions that a home component will fail."
 }
