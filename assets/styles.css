@@ -60,5 +60,46 @@ a{color:inherit}button,input,select,textarea{font:inherit}img{max-width:100%}
 /* action-plan gate and uploads */
 .email-gate{text-align:left;max-width:650px;margin:auto}.email-gate h2{text-align:center;font-size:32px;line-height:1.12;margin:9px 0}.email-gate>p{text-align:center;color:var(--muted)}.plan-promise{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:20px 0}.plan-promise div{border:1px solid var(--line);border-radius:12px;padding:11px;font-size:12px;background:#fbfcfb}.upload-zone{border:1.5px dashed #aabbb3;border-radius:18px;background:#fafcfb;padding:22px;text-align:center;margin:14px 0}.upload-zone input{display:none}.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}.photo-preview{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:1;background:#edf1ee}.photo-preview img{width:100%;height:100%;object-fit:cover}.photo-preview span{position:absolute;left:6px;right:6px;bottom:6px;background:rgba(11,47,39,.8);color:white;border-radius:7px;padding:4px 6px;font-size:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.disclaimer-box{background:#f7f9f7;border:1px solid var(--line);border-radius:13px;padding:13px 14px;color:var(--muted);font-size:11px;margin-top:20px}.calc-screen{text-align:center;padding:34px 0}.spinner{width:44px;height:44px;border-radius:50%;border:4px solid #e7ece9;border-top-color:var(--austin);margin:0 auto 18px;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.calc-list{max-width:520px;margin:24px auto;text-align:left;display:grid;gap:8px}.calc-item{padding:11px 13px;border-radius:11px;background:#f3f5f4;color:#7a8883;font-size:12px}.calc-item:before{content:"○";margin-right:9px}.calc-item.done{color:var(--forest);background:#eef5f0}.calc-item.done:before{content:"✓";color:#5b8a69;font-weight:900}
 
+
+/* Compact assessment mode: once an address is submitted, keep the active question/result above the fold. */
+body.tool-active .topbar{display:none}
+body.tool-active .site-header .nav{min-height:58px}
+body.tool-active .tool-shell{padding:14px 0 64px;min-height:calc(100vh - 58px)}
+body.tool-active .tool-intro{margin:0 auto 10px;min-height:34px;display:flex;align-items:center;gap:10px;text-align:left}
+body.tool-active .tool-intro .coordinate,body.tool-active .tool-intro .eyebrow,body.tool-active .tool-intro>p,body.tool-active .tool-intro .badge-row{display:none}
+body.tool-active .tool-intro .tool-icon{width:32px;height:32px;border-radius:10px;font-size:16px;margin:0;flex:0 0 auto}
+body.tool-active .tool-intro h1{font-size:20px;line-height:1.1;letter-spacing:-.025em;margin:0;max-width:none}
+body.tool-active .tool-intro:after{content:"Assessment in progress";margin-left:auto;font-size:10px;font-weight:850;letter-spacing:.09em;text-transform:uppercase;color:#71807a;white-space:nowrap}
+body.tool-active[data-tool-stage="result"] .tool-intro:after{content:"Your results"}
+body.tool-active[data-tool-stage="action-plan"] .tool-intro:after{content:"Action Plan"}
+body.tool-active .assessment-card{margin-top:8px;padding:24px;scroll-margin-top:78px}
+body.tool-active .progress{margin-bottom:18px}
+body.tool-active .question h2{font-size:27px;margin:7px 0 8px}
+body.tool-active .question p{margin-bottom:14px}
+body.tool-active .options{gap:7px;margin-top:13px}
+body.tool-active .option{padding:11px 14px;border-radius:12px}
+body.tool-active .actions{margin-top:17px}
+body.tool-active .property-reveal{gap:14px}
+body.tool-active .map-frame,body.tool-active .map-frame iframe,body.tool-active .map-frame .leaflet-map{height:300px;min-height:300px}
+body.tool-active .property-head h2{font-size:27px}
+
+/* Deliberate assessment-build reveal. The risk engine itself is local; this gives the homeowner time to see which inputs are being combined. */
+.calc-progress{height:8px;background:#edf1ee;border-radius:999px;overflow:hidden;max-width:520px;margin:20px auto 0}
+.calc-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--forest),var(--lime),var(--austin));animation:riskBuildFill 15s linear forwards}
+.calc-status{font-size:11px;color:#71807a;margin-top:8px;letter-spacing:.02em}
+@keyframes riskBuildFill{to{width:100%}}
+
 @media(max-width:900px){.nav-links a:not(.nav-cta){display:none}.hero-grid,.personalization-demo,.trust{grid-template-columns:1fr}.hero-visual{min-height:470px}.tool-grid{grid-template-columns:repeat(2,1fr)}.property-scan{grid-template-columns:repeat(2,1fr)}.section-header{align-items:start;flex-direction:column}.process{grid-template-columns:1fr}.result-grid{grid-template-columns:1fr;text-align:center}.result-copy p{margin:auto}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}}
 @media(max-width:620px){.container{width:min(100% - 24px,1160px)}.hero{padding:42px 0}.hero-grid{gap:28px}.hero-visual{min-height:430px}.austin-sticker{right:16px}.radar-cards{left:16px;right:16px;bottom:16px}.tool-grid,.concern-grid,.property-scan,.plan-promise{grid-template-columns:1fr}.address-card{flex-direction:column}.address-card .btn{width:100%}.section{padding:60px 0}.assessment-card{padding:21px;border-radius:22px}.question h2{font-size:26px}.property-head{flex-direction:column}.map-frame,.map-frame iframe,.map-frame .leaflet-map{min-height:290px;height:290px}.actions{flex-direction:column-reverse}.actions .btn{width:100%}.photo-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child{grid-column:auto}}
+
+@media(max-width:620px){
+  body.tool-active .site-header .nav{min-height:54px}
+  body.tool-active .tool-shell{padding-top:10px}
+  body.tool-active .tool-intro{min-height:30px}
+  body.tool-active .tool-intro h1{font-size:17px}
+  body.tool-active .tool-intro:after{display:none}
+  body.tool-active .assessment-card{padding:18px;margin-top:6px}
+  body.tool-active .question h2{font-size:24px}
+  body.tool-active .option{padding:11px 12px}
+  body.tool-active .map-frame,body.tool-active .map-frame iframe,body.tool-active .map-frame .leaflet-map{height:270px;min-height:270px}
+}
