@@ -37,7 +37,7 @@ const LEAD_FORM_CONFIGS = {
     urgentWorkType: 'No AC / urgent',
     urgentMatchValue: 1,
     workTypes: [
-      'No AC / urgent','AC repair','Replacement','Maintenance','Second opinion','Airflow / comfort','Not sure'
+      'No AC / urgent','AC running but not cooling','Expensive repair / second opinion','AC replacement','Maintenance / tune-up','Not sure what I need'
     ],
     systemTypes: ['Central AC','Heat pump','Packaged system','Not sure'],
     systemAges: ['Under 5 years','5–10 years','10–15 years','15+ years','Not sure'],
@@ -54,7 +54,7 @@ const LEAD_FORM_CONFIGS = {
         value:3, label:'Three contractors', kicker:'Compare before you choose', badge:'Recommended for bigger jobs',
         desc:'Hear from up to three vetted professionals so you can compare recommendations, availability and quotes.',
         bullets:['Replacement is being discussed','It’s an expensive repair','You want a second opinion','Scopes or quotes are very different'],
-        recommendWhen:['Replacement','Second opinion']
+        recommendWhen:['AC replacement','Expensive repair / second opinion']
       }
     ]
   }
@@ -62,6 +62,10 @@ const LEAD_FORM_CONFIGS = {
 
 const AHILeadForm = (function(){
   function esc(s){return window.AHIProperty?.escapeHtml(s) ?? String(s??'')}
+  function slugify(s){return String(s||'').toLowerCase().replace(/[^a-z0-9]+/g,'_').replace(/^_+|_+$/g,'')}
+  // Lightweight, vendor-agnostic event hooks. No analytics SDK is wired up yet;
+  // this just gives a future snippet (GA, etc.) something to listen for.
+  function track(name, detail){ try{ document.dispatchEvent(new CustomEvent(name,{detail})) }catch(e){} }
 
   function mount(el, cfg){
     if(!el || !cfg) return;
@@ -142,7 +146,7 @@ const AHILeadForm = (function(){
       if(state.step===1){
         el.innerHTML = `${progressHtml(1)}${workTypeGridHtml()}<div class="actions"><span></span><button type="button" class="btn btn-primary" id="lf-next1" ${state.selectedWork.length?'':'disabled'}>Continue →</button></div>`;
         wireWorktype(()=>{ document.getElementById('lf-next1').disabled = state.selectedWork.length===0 });
-        document.getElementById('lf-next1').onclick = ()=>{ state.step = cfg.matchCounts?2:3; render() };
+        document.getElementById('lf-next1').onclick = ()=>{ track('ahi:matching_form_started',{service:cfg.service,jobTypes:state.selectedWork}); state.step = cfg.matchCounts?2:3; render() };
       } else if(state.step===2 && cfg.matchCounts){
         el.innerHTML = `${progressHtml(2)}<div class="question-kicker">How many pros would you like to hear from?</div>${matchGridHtml()}<div class="actions"><button type="button" class="btn btn-ghost" id="lf-back2">← Back</button><button type="button" class="btn btn-primary" id="lf-next2">Continue →</button></div>`;
         wireMatch();
@@ -160,7 +164,9 @@ const AHILeadForm = (function(){
         b.onclick=()=>{
           const label = b.textContent;
           const idx = state.selectedWork.indexOf(label);
+          const nowSelected = idx===-1;
           if(idx>-1) state.selectedWork.splice(idx,1); else state.selectedWork.push(label);
+          if(nowSelected) track('ahi:issue_selected',{service:cfg.service,jobType:slugify(label),label});
           if(cfg.multiStep){ b.classList.toggle('selected'); b.setAttribute('aria-pressed', state.selectedWork.includes(label)); onChange?.() }
           else render();
         };
@@ -168,7 +174,7 @@ const AHILeadForm = (function(){
     }
     function wireMatch(){
       el.querySelectorAll('.match-card').forEach(c=>{
-        c.onclick=()=>{ state.selectedMatch = Number(c.dataset.value); render() };
+        c.onclick=()=>{ state.selectedMatch = Number(c.dataset.value); track('ahi:match_count_selected',{service:cfg.service,count:state.selectedMatch}); render() };
       });
     }
     function wireSymptoms(){
@@ -202,14 +208,15 @@ const AHILeadForm = (function(){
           type:'service_lead', service:cfg.service, tool:cfg.service,
           firstName: form.name.value.trim(), phone: form.phone.value.trim(),
           address: form.address.value.trim(), contactPreference:'Either',
-          timing: form.timing.value, selectedConcerns: state.selectedWork, answers,
+          timing: form.timing.value, selectedConcerns: state.selectedWork,
+          jobType: state.selectedWork.map(slugify).join(','), answers,
           requestedContractors: cfg.matchCounts ? state.selectedMatch : undefined,
           propertyId: window.AHIProperty?.propertyId(form.address.value.trim()),
           source: location.href, createdAt: new Date().toISOString()
         };
         btn.disabled = true; btn.textContent = 'Sending…';
         const ok = await sendLead(payload);
-        if(ok){ state.submitted = true; render(); return }
+        if(ok){ state.submitted = true; track('ahi:matching_form_submitted',{service:cfg.service,jobType:payload.jobType,requestedContractors:payload.requestedContractors}); render(); return }
         statusEl.textContent = 'Saved locally (demo mode) — connect the Worker endpoint in assets/config.js before paid traffic.';
         btn.disabled = false; btn.textContent = submitLabel();
       });
