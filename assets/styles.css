@@ -221,4 +221,11 @@ body.assessment-focus section.tool-shell{min-height:100vh}
 .contractor-stat small{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#71807a;font-weight:850}
 .contractor-stat strong{display:block;font-size:13.5px;margin-top:3px}
 
-@media(max-width:900px){.worktype-grid{grid-template-columns:repeat(2,1fr)}.calc-controls{grid-template-columns:1fr}.calc-refine-grid{grid-template-columns:1fr}.calc-results{grid-template-columns:1fr}.match-count-grid{grid-template-columns:1fr}.contractor-stat-grid{grid-template-columns:1fr}}
+.lead-disclosure{background:#f7f9f7;border:1px solid var(--line);border-radius:13px;padding:13px 14px;color:var(--muted);font-size:12px;line-height:1.55;margin:16px 0}
+.lead-disclosure strong{color:var(--forest);display:block;margin-bottom:3px}
+.lead-success{padding:10px 0}
+.trust-chip-row{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 0}
+.trust-chip{display:flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 15px;font-size:13px;font-weight:760;flex:1;min-width:220px}
+.trust-chip .trust-chip-icon{font-size:18px}
+
+@media(max-width:900px){.worktype-grid{grid-template-columns:repeat(2,1fr)}.calc-controls{grid-template-columns:1fr}.calc-refine-grid{grid-template-columns:1fr}.calc-results{grid-template-columns:1fr}.match-count-grid{grid-template-columns:1fr}.contractor-stat-grid{grid-template-columns:1fr}.trust-chip-row{flex-direction:column}}
