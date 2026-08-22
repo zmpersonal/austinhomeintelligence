@@ -175,3 +175,50 @@ body.has-sticky-cta.assessment-focus .sticky-cta-bar{display:none!important}
    it shouldn't be forced to fill the remaining viewport height. */
 section.tool-shell{min-height:0}
 body.assessment-focus section.tool-shell{min-height:100vh}
+
+/* 2026-08-21 lead form, calculator, contractor-finder components (shared across niche pages) */
+.worktype-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:4px}
+.worktype-chip{border:1px solid var(--line);background:#fff;border-radius:14px;padding:14px 12px;font-size:13px;font-weight:760;text-align:center;cursor:pointer;min-height:48px;transition:.15s ease}
+.worktype-chip:hover{border-color:#9fb3aa}
+.worktype-chip.selected{border-color:var(--forest);background:#f1f6f3;box-shadow:inset 0 0 0 1px var(--forest)}
+.lead-contact-form{margin-top:18px;border-top:1px solid var(--line);padding-top:18px}
+.lead-form-status{font-size:13px;color:var(--forest);margin-top:10px;min-height:1em}
+
+.calc-controls{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.calc-refine{grid-column:1/-1;border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:#fbfcfb}
+.calc-refine summary{font-weight:800;cursor:pointer;font-size:13px}
+.calc-refine-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.field-error{color:#b3402b;font-size:11.5px;display:block;min-height:1.2em}
+.calc-results{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}
+.calc-card{border:1px solid var(--line);border-radius:18px;padding:18px;background:#fbfcfb}
+.calc-card small{font-size:9px;letter-spacing:.1em;font-weight:900;color:#71807a}
+.calc-card strong{display:block;font-size:19px;margin:7px 0 6px;letter-spacing:-.02em;color:var(--forest)}
+.calc-card p{font-size:12.5px;color:var(--muted);margin:0;line-height:1.55}
+.calc-card-wide{grid-column:1/-1;background:linear-gradient(135deg,#eff5f0,#f9eee9)}
+.calc-methodology{margin-top:16px;border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:#fff}
+.calc-methodology summary{font-weight:800;cursor:pointer;font-size:13px}
+.calc-methodology ul{margin:12px 0 0;padding-left:20px}
+.calc-methodology li{font-size:12.5px;color:var(--muted);margin:6px 0;line-height:1.5}
+
+.match-count-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+.match-card{border:2px solid var(--line);border-radius:22px;padding:24px;background:#fff;cursor:pointer;text-align:left;position:relative;transition:.15s ease}
+.match-card:hover{border-color:#9fb3aa}
+.match-card.selected{border-color:var(--forest);background:#f1f6f3}
+.match-card .match-badge{position:absolute;top:-11px;left:20px;background:var(--austin);color:#fff;font-size:9px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;padding:5px 9px;border-radius:999px}
+.match-card h3{font-size:22px;margin:6px 0 4px;letter-spacing:-.02em}
+.match-card .match-kicker{font-size:11px;color:var(--austin);font-weight:850;text-transform:uppercase;letter-spacing:.06em}
+.match-card p{color:var(--muted);font-size:13px;margin:8px 0 12px}
+.match-card ul{margin:0;padding-left:18px}
+.match-card li{font-size:12.5px;color:var(--muted);margin:4px 0}
+
+.contractor-card{border:1px solid var(--line);border-radius:22px;padding:22px;background:#fff}
+.contractor-card.sample{position:relative;overflow:hidden}
+.contractor-card.sample:before{content:"SAMPLE FORMAT — NOT A REAL CONTRACTOR";position:absolute;top:14px;right:-38px;background:var(--austin);color:#fff;font-size:9px;font-weight:900;letter-spacing:.06em;padding:5px 44px;transform:rotate(28deg)}
+.contractor-card h3{font-size:20px;margin:0 0 4px}
+.contractor-card .contractor-tag{font-size:11px;color:var(--forest);font-weight:800;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px;display:block}
+.contractor-stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.contractor-stat{border:1px solid var(--line);border-radius:13px;padding:11px 12px;background:#fbfcfb}
+.contractor-stat small{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#71807a;font-weight:850}
+.contractor-stat strong{display:block;font-size:13.5px;margin-top:3px}
+
+@media(max-width:900px){.worktype-grid{grid-template-columns:repeat(2,1fr)}.calc-controls{grid-template-columns:1fr}.calc-refine-grid{grid-template-columns:1fr}.calc-results{grid-template-columns:1fr}.match-count-grid{grid-template-columns:1fr}.contractor-stat-grid{grid-template-columns:1fr}}
