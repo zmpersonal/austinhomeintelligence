@@ -1,8 +1,9 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Austin AC Risk Check | Austin Home Intelligence</title>
-<meta name="description" content="A free, Austin-specific AC Risk Check. See whether your system deserves maintenance, a repair, a replacement conversation — or just monitoring. No phone required.">
+<meta name="description" content="A free, Austin-specific AC Risk Check. See whether your system deserves maintenance, a repair, a replacement conversation — or just monitoring. No phone required for your initial result.">
 <link rel="canonical" href="https://austinhomeintelligence.com/hvac.html">
 <meta property="og:title" content="Austin AC Risk Check"><meta property="og:description" content="How much life does your AC have left? Get a free, Austin-specific answer in about 2 minutes."><meta property="og:type" content="website">
+<meta name="ahi-build" content="2026-08-21-hvac-master-template">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="stylesheet" href="assets/styles.css"><link rel="stylesheet" href="assets/content.css">
 <script type="application/ld+json">
@@ -10,78 +11,58 @@
   "@context":"https://schema.org",
   "@type":"FAQPage",
   "mainEntity":[
-    {"@type":"Question","name":"How much does AC replacement cost in Austin?","acceptedAnswer":{"@type":"Answer","text":"Total cost depends heavily on tonnage, equipment efficiency (SEER2), ductwork condition, electrical work and whether a permit is required — which is why wide national averages are hard to trust for a specific house. Austin Home Intelligence is building a scope-normalized Austin pricing dataset instead of publishing a single number today; see our cost & provider intelligence section below."}},
-    {"@type":"Question","name":"Is $15,000 too much for HVAC replacement?","acceptedAnswer":{"@type":"Answer","text":"It depends on what's actually included — system size and efficiency, ductwork changes, electrical upgrades, permits, thermostat and warranty terms — not just the final number. Ask your contractor to itemize each of those before comparing quotes."}},
-    {"@type":"Question","name":"Should I repair or replace a 14-year-old AC?","acceptedAnswer":{"@type":"Answer","text":"A commonly used industry guideline multiplies the system's age by the repair cost; a high result relative to full replacement cost tends to favor replacement. Repair history, efficiency and comfort complaints matter too. Our free AC Risk Check walks through this using your own numbers."}},
-    {"@type":"Question","name":"Do I need a permit to replace my AC in Austin?","acceptedAnswer":{"@type":"Answer","text":"A full system replacement generally requires a mechanical permit pulled by a licensed contractor. Straightforward like-for-like repairs typically don't require a separate permit, though scope and interpretation can vary. See our Austin HVAC Permit Guide for details."}},
-    {"@type":"Question","name":"How do I choose an HVAC company in Austin?","acceptedAnswer":{"@type":"Answer","text":"Reviews and star ratings alone don't confirm sizing, permits, scope or warranty. Check licensing, insurance, service area, permit competency, quote completeness, emergency availability and warranty terms — see our provider-selection criteria below."}},
-    {"@type":"Question","name":"What should an AC repair cost?","acceptedAnswer":{"@type":"Answer","text":"It depends on the failed component, whether refrigerant is involved, and labor time — a capacitor and a compressor are not comparable repairs. We're building scope-normalized Austin repair pricing rather than publishing an unverified range today."}},
-    {"@type":"Question","name":"When should I service my AC?","acceptedAnswer":{"@type":"Answer","text":"Most manufacturers recommend at least one professional service visit per year, ideally scheduled before peak Austin cooling season rather than during it."}},
-    {"@type":"Question","name":"Why is my upstairs hotter than the rest of the house?","acceptedAnswer":{"@type":"Answer","text":"Common causes include duct balancing issues, insulation differences, and undersized returns upstairs. It's worth describing to a technician specifically rather than assuming it's simply that heat rises."}},
-    {"@type":"Question","name":"Why did my electric bill jump?","acceptedAnswer":{"@type":"Answer","text":"Possible causes include seasonal heat, an aging or less efficient system, thermostat habits, or a developing mechanical issue. Our AC Risk Check helps narrow down which of those is most likely at your address."}},
-    {"@type":"Question","name":"Is duct cleaning actually necessary?","acceptedAnswer":{"@type":"Answer","text":"Not automatically. It depends on visible evidence such as debris, suspected mold or pest contamination — not a routine calendar. See our Duct Cleaning Check and guide for when cleaning is actually justified."}}
+    {"@type":"Question","name":"Why is my AC running but not cooling?","acceptedAnswer":{"@type":"Answer","text":"Common causes include a dirty filter or coil, low refrigerant, a failing capacitor or motor, blocked airflow, or a thermostat/control issue. Our free AC Risk Check walks through your symptoms to help narrow down what's most likely before you call anyone."}},
+    {"@type":"Question","name":"Should I repair or replace an older AC?","acceptedAnswer":{"@type":"Answer","text":"Don't let age alone decide it. Weigh repair cost, how often it's needed repairs, cooling performance, efficiency, remaining warranty and replacement cost together — see Before You Approve Work above."}},
+    {"@type":"Question","name":"How long does a central AC usually last?","acceptedAnswer":{"@type":"Answer","text":"Typically 15–18 years as a general reference range. Actual life varies with equipment, installation, climate, use and maintenance — it's a planning range, not a failure date."}},
+    {"@type":"Question","name":"How much does AC replacement cost in Austin?","acceptedAnswer":{"@type":"Answer","text":"It depends on tonnage, efficiency (SEER2), ductwork, electrical work and permits — which is why a single average is misleading. We're building a scope-normalized Austin pricing dataset; see the market data section above for current status."}},
+    {"@type":"Question","name":"Is $15,000 too much for a new HVAC system?","acceptedAnswer":{"@type":"Answer","text":"It depends on what's included — system size and efficiency, ductwork changes, electrical upgrades, permits, thermostat and warranty terms. Ask your contractor to itemize each before comparing quotes."}},
+    {"@type":"Question","name":"How much electricity does an AC use in Austin?","acceptedAnswer":{"@type":"Answer","text":"It depends on system size, efficiency, your home and how much you run it. We don't yet have verified local electricity-rate data to turn this into a dollar figure — see the calculator above for current status."}},
+    {"@type":"Question","name":"Can regular AC maintenance actually save money?","acceptedAnswer":{"@type":"Answer","text":"Airflow and maintenance problems can raise energy use for the same cooling output by roughly 15% in commonly cited estimates. That's a scenario, not a guaranteed savings number — actual savings depend on your system's current condition."}},
+    {"@type":"Question","name":"Why is upstairs hotter than downstairs?","acceptedAnswer":{"@type":"Answer","text":"Common causes include duct balancing, insulation differences, and undersized returns upstairs. Worth describing specifically to a technician rather than assuming it's simply that heat rises."}},
+    {"@type":"Question","name":"Do I need duct cleaning if my AC isn't cooling?","acceptedAnswer":{"@type":"Answer","text":"Not automatically — duct cleaning solves a specific set of problems (debris, contamination), not general cooling complaints. See our Duct Cleaning Check for a symptom-based answer."}},
+    {"@type":"Question","name":"Do I need a permit to replace my AC in Austin?","acceptedAnswer":{"@type":"Answer","text":"A full system replacement generally requires a mechanical permit pulled by a licensed contractor. Straightforward like-for-like repairs typically don't. See our Austin HVAC Permit Guide for details."}},
+    {"@type":"Question","name":"How do I choose an HVAC company in Austin?","acceptedAnswer":{"@type":"Answer","text":"Check licensing, insurance, whether they actually serve your area, permit competency, quote completeness, availability, reputation and warranty terms — see How We Evaluate an Austin HVAC Company above."}},
+    {"@type":"Question","name":"Can I see my AC risk result without giving you my email?","acceptedAnswer":{"@type":"Answer","text":"Yes. Right now you can see your initial risk result without an email. We may require one for full reports in the future, but it isn't required today."}}
   ]
 }
 </script>
 </head><body data-tool="hvac" class="has-sticky-cta">
 <div class="topbar">Austin property context • Risk first • No email gate</div>
-<header class="site-header"><div class="container nav"><a class="brand" href="index.html"><span class="brand-mark"></span><span>Austin Home Intelligence</span></a><nav class="nav-links"><a href="index.html#checks">All checks</a><a href="index.html#personalized">How it works</a><a class="nav-cta" href="#risk-check">Start AC Risk Check</a></nav></div></header>
+<header class="site-header"><div class="container nav"><a class="brand" href="index.html"><span class="brand-mark"></span><span>Austin Home Intelligence</span></a><nav class="nav-links"><a href="index.html#checks">All checks</a><a href="hvac-pros.html">Find an HVAC pro</a><a class="nav-cta" href="#risk-check">Start AC Risk Check</a></nav></div></header>
 <main>
 
 <section class="hero hero-homepage marketing-section"><div class="container hero-grid">
   <div>
     <span class="eyebrow">Free Austin AC Risk Check</span>
     <h1>How much life does your AC <strong class="highlight">actually</strong> have left?</h1>
-    <p class="lead">Answer a few quick questions about your system, symptoms and history. We combine your answers with Austin conditions to show what deserves attention first — no phone number required to see your result.</p>
-    <div class="badge-row" style="justify-content:flex-start;margin:4px 0 22px"><span class="mini-badge">About 2 minutes</span><span class="mini-badge">Personalized to your home</span><span class="mini-badge">No phone required</span><span class="mini-badge">Not an HVAC diagnosis</span></div>
+    <p class="lead">Answer a few quick questions about your system, symptoms and history. We combine your answers with Austin conditions to show what deserves attention first.</p>
+    <div class="badge-row" style="justify-content:flex-start;margin:4px 0 22px"><span class="mini-badge">Free</span><span class="mini-badge">About 2 minutes</span><span class="mini-badge">No phone required</span><span class="mini-badge">Not an HVAC diagnosis</span></div>
     <a class="btn btn-primary" href="#risk-check">Start My AC Risk Check →</a>
-    <div class="microcopy">Risk result shown first. Email is only needed later, for the deeper Action Plan.</div>
+    <div class="microcopy">Right now, you can see your initial risk result without giving us your email.</div>
   </div>
   <div class="hero-visual hero-visual-image">
     <div class="hero-report-mock">
-      <div class="report-mock-label">Sample AC Risk Report</div>
-      <span class="report-mock-chip">Check soon</span>
-      <h3>AC / HVAC</h3>
-      <p>14+ year system, declining cooling performance and two recent repairs — combined with peak Austin cooling demand — make this worth a closer look before the next heat wave.</p>
-      <div class="report-mock-next"><strong>Suggested next step</strong>Request a system evaluation that separates maintenance, repair and replacement options before approving major work.</div>
+      <div class="report-mock-label">Your AC Risk Report — example result, not your home's actual score</div>
+      <span class="report-mock-chip">Priority: check soon</span>
+      <h3>Example score: 74</h3>
+      <p>Looks at system age, cooling performance, repair history and current Austin heat load — then tells you what to check first, what can probably wait, and whether repair-vs-replacement signals apply.</p>
+      <div class="report-mock-next"><strong>Address → Questions → Personalized result</strong>About 2 minutes, no phone number required to see it.</div>
     </div>
   </div>
 </div></section>
 
-<div class="reassurance-strip marketing-section"><div class="container reassurance-items"><span>About 2 minutes</span><span>Personalized to your home</span><span>No phone required</span><span>Not an HVAC diagnosis</span></div></div>
-
-<section class="section marketing-section"><div class="container split-story">
-  <div>
-    <span class="eyebrow">Sound familiar?</span>
-    <h2>The AC is fine—until it suddenly isn't.</h2>
-    <p class="section-lead">Most Austin homeowners don't decide to think about their AC. Something forces it.</p>
-    <p>The AC takes longer to cool. Upstairs never feels comfortable. The electric bill jumped for no obvious reason. The system is 12–15 years old. You've already paid for two repairs this year. A contractor says it's time to replace it.</p>
-    <p>The difficult part isn't knowing something is happening. It's knowing whether it deserves maintenance, a repair, a replacement — or simply monitoring for now.</p>
-    <p class="plain-emphasis">This is where a real answer, specific to your house, actually helps.</p>
+<section id="data-section" class="section white marketing-section"><div class="container">
+  <div class="section-header"><div><span class="eyebrow">Your report looks at more than your answers</span><h2>Built around your AC, your home and what's happening in Austin.</h2></div><p>Your answers tell us what you're experiencing. Local and property data helps us understand the context around it.</p></div>
+  <div class="context-grid">
+    <div class="context-card" data-live-risk="heat"><span>⛅</span><h3>Current Austin weather</h3><p>Heat, freezes, storms and near-term conditions can put extra stress on HVAC equipment.</p><div class="source-time"><span>Value: <span data-risk-value>Loading…</span> (<span data-risk-state>—</span>)</span><span>Last checked: <span data-signal-updated>loading…</span></span></div></div>
+    <div class="context-card"><span>📜</span><h3>Property &amp; permit history</h3><p>Available Austin records can add context about previous HVAC replacements and mechanical work at your address.</p><a href="guides/austin-hvac-permit-guide.html" style="font-size:12px;font-weight:800;color:var(--forest);text-decoration:none">See the permit guide →</a></div>
+    <div class="context-card"><span>🌡️</span><h3>System age &amp; history</h3><p>Age, repairs, maintenance and recurring symptoms help determine what actually deserves attention — not age alone.</p></div>
+    <div class="context-card"><span>💵</span><h3>Local energy costs</h3><p>Current electricity pricing helps turn HVAC efficiency and operating costs into real dollars.</p><a href="#hvac-calc" style="font-size:12px;font-weight:800;color:var(--forest);text-decoration:none">See the cost calculator →</a></div>
+    <div class="context-card"><span>🔧</span><h3>HVAC service-life data</h3><p>Published equipment-life data gives useful context around older systems, without implying age alone means failure.</p></div>
+    <div class="context-card"><span>⚖️</span><h3>Austin costs &amp; regulations</h3><p>Replacement pricing, labor context, permits and contractor requirements help you decide what to do after risk has been assessed.</p><a href="#market-data" style="font-size:12px;font-weight:800;color:var(--forest);text-decoration:none">See Austin market data →</a></div>
   </div>
-  <div class="home-task-board">
-    <div class="task-board-head"><span>THIS SUMMER</span><strong>Is this happening at your house?</strong></div>
-    <div class="task-row"><span class="task-icon">🌡️</span><div><strong>Takes longer to cool</strong><small>Especially on 95°+ afternoons</small></div><span class="task-state soon">!</span></div>
-    <div class="task-row"><span class="task-icon">🏠</span><div><strong>Upstairs never feels right</strong><small>Even with the thermostat set lower</small></div><span class="task-state watch">?</span></div>
-    <div class="task-row"><span class="task-icon">⚡</span><div><strong>Electric bill jumped</strong><small>No new appliances or rate change</small></div><span class="task-state watch">?</span></div>
-    <div class="task-row"><span class="task-icon">🔧</span><div><strong>Already repaired twice</strong><small>In the last 12–24 months</small></div><span class="task-state soon">!</span></div>
-    <div class="task-note">The AC Risk Check turns this into one priority order instead of five separate worries.</div>
-  </div>
-</div></section>
-
-<section id="what-youll-get" class="section white marketing-section"><div class="container">
-  <div class="section-header"><div><span class="eyebrow">See what you'll get</span><h2>A priority order—not a diagnosis you have to interpret yourself.</h2></div><p>Your free Risk Check sorts your AC concerns the way a good technician would: what to check now, what to watch, and what probably isn't worth spending money on yet.</p></div>
-  <div class="personalization-demo">
-    <div class="demo-map demo-map-image"><img src="assets/property-satellite-preview.svg" alt="Satellite-style Austin property view used to confirm a home"></div>
-    <div class="demo-report">
-      <div class="question-kicker" style="color:#b8cec6">Example AC Risk Report</div>
-      <h3>Your system, sorted into priorities.</h3>
-      <div class="demo-finding finding-soon"><span class="finding-state">Check soon</span><strong>Cooling performance</strong><p>System age, cooling symptoms, repair history and Austin's peak cooling demand combine to make this worth a closer look.</p></div>
-      <div class="demo-finding finding-watch"><span class="finding-state">Keep an eye on it</span><strong>Energy use</strong><p>A rising bill can mean a lot of things. Worth tracking before assuming the worst.</p></div>
-      <div class="demo-finding finding-wait"><span class="finding-state">Can probably wait</span><strong>Duct cleaning</strong><p>No strong symptoms reported yet—cleaning may not be the first place to spend money.</p></div>
-      <p class="demo-footnote">Sometimes the right recommendation is to wait, maintain, or do nothing for now—and we'll tell you when that's the case.</p>
-    </div>
-  </div>
+  <div class="method-message" style="margin-top:22px">Facts affect the report where appropriate. Cost and market data help with the decision — they don't artificially increase your risk score.</div>
+  <div class="center-cta"><a class="btn btn-ghost" href="data/">Explore Our Data &amp; Sources →</a></div>
 </div></section>
 
 <section id="risk-check" class="tool-shell"><div class="tool-wrap">
@@ -90,113 +71,86 @@
   <section class="assessment-card hidden" id="assessmentCard"></section>
 </div></section>
 
-<section id="austin-data-hvac" class="section data-context-section marketing-section"><div class="container">
-  <div class="section-header"><div><span class="eyebrow">Why Austin conditions matter to your AC</span><h2>Your answers are only part of the picture.</h2></div><p>Heat, property history and public records can all change how much attention your system deserves right now.</p></div>
-
-  <div class="input-separation">
-    <div class="input-column risk-input"><small>CAN AFFECT PRIORITY</small><h3>Risk inputs</h3><p>System age, symptoms, repair history and current Austin cooling demand — these can reasonably change what deserves attention first.</p></div>
-    <div class="input-column context-input"><small>HELPS WITH THE DECISION</small><h3>Decision-context inputs</h3><p>Contractor pricing, financing and permit costs help you decide what to do — but they don't automatically make your risk score higher.</p></div>
-  </div>
-
-  <div class="evidence-grid">
-    <div class="evidence-card" data-live-risk="heat">
-      <div class="evidence-top"><small>NOAA / NATIONAL WEATHER SERVICE</small><span class="risk-chip">Live</span></div>
-      <h3>Austin cooling demand</h3>
-      <div class="dashboard-value" data-risk-value>Loading current signal…</div>
-      <p data-risk-state>Checking the current Austin forecast.</p>
-      <div class="evidence-affects"><strong>How it affects your report</strong>Sustained heat increases system workload and makes existing performance problems more consequential.</div>
-      <div class="evidence-not"><strong>What it doesn't prove</strong>It doesn't tell us your specific system is failing — only that the season raises the stakes of existing problems.</div>
-      <div class="source-time"><span>Source period: ~7-day NWS forecast</span><span>Last checked: <span data-signal-updated>loading…</span></span></div>
-    </div>
-    <div class="evidence-card">
-      <div class="evidence-top"><small>CITY OF AUSTIN OPEN DATA</small><span class="risk-chip">Live</span></div>
-      <h3>Permit &amp; property history</h3>
-      <div class="dashboard-value">Address-matched</div>
-      <p>Building, electrical and mechanical permit records may show a previous HVAC replacement or related work at your address.</p>
-      <div class="evidence-affects"><strong>How we use it</strong>May provide context about prior permitted mechanical work — useful when you don't know the system's full history.</div>
-      <div class="evidence-not"><strong>What it doesn't prove</strong>A permit on file doesn't confirm current system condition, and no permit doesn't mean nothing was done.</div>
-      <div class="source-time"><span>Dataset period: 1980–present</span><span>Last checked: Aug 21, 2026</span></div>
-    </div>
-  </div>
-  <div class="center-cta"><a class="btn btn-ghost" href="data/">Explore Our Data &amp; Sources →</a></div>
+<section id="lead-form" class="section white marketing-section"><div class="container">
+  <div class="section-header"><div><span class="eyebrow">Need an HVAC pro now?</span><h2>Want an Austin HVAC professional to contact you?</h2></div><p>Tell us what you need help with. We'll use the job type and your location to connect you with a relevant local professional.</p></div>
+  <div id="hvac-lead-mount" style="max-width:760px"></div>
 </div></section>
 
-<section id="permits" class="section white marketing-section"><div class="container">
-  <div class="section-header"><div><span class="eyebrow">Before you approve work</span><h2>Do I need a permit to replace my AC in Austin?</h2></div><p>A quick way to think it through before a contractor brings it up.</p></div>
+<section id="hvac-calc" class="section marketing-section"><div class="container">
+  <div class="section-header"><div><span class="eyebrow">HVAC cost calculator</span><h2>What does it cost to keep an AC running where you live?</h2></div><p>A working estimate you can refine — and a transparent note on which parts of it are verified today.</p></div>
+  <div id="hvac-calc-mount"></div>
+</div></section>
+
+<section id="before-you-approve" class="section white marketing-section"><div class="container">
+  <div class="section-header"><div><span class="eyebrow">Before you approve AC work</span><h2>Four things to check before you say yes.</h2></div></div>
   <div class="action-list">
-    <div class="action-item"><div class="action-num">1</div><div><h4>Replacing the whole system?</h4><p>A full HVAC replacement in Austin generally requires a mechanical permit pulled by a licensed contractor.</p></div></div>
-    <div class="action-item"><div class="action-num">2</div><div><h4>Just a like-for-like repair?</h4><p>Many straightforward repairs (capacitor, motor, minor component swaps) typically don't require a separate permit — but rules and scope interpretations vary.</p></div></div>
-    <div class="action-item"><div class="action-num">3</div><div><h4>Not sure which one this is?</h4><p>Ask the contractor directly whether they are pulling a permit, and confirm they're licensed to do so in Austin before work starts.</p></div></div>
+    <div class="action-item"><div class="action-num">1</div><div><h4>Repair or replacement?</h4><p>Don't let system age alone make the decision. Consider repair cost, repair frequency, cooling performance, energy efficiency, remaining warranty and replacement cost together.</p></div></div>
+    <div class="action-item"><div class="action-num">2</div><div><h4>What's actually included?</h4><p>A useful quote should make the scope visible: exact equipment model, tonnage/capacity, SEER2, labor, electrical work, duct changes, thermostat, disposal, permits and warranty.</p></div></div>
+    <div class="action-item"><div class="action-num">3</div><div><h4>Does the work require a permit?</h4><p>A full system replacement in Austin generally needs a mechanical permit pulled by a licensed contractor. <a href="guides/austin-hvac-permit-guide.html">See the full permit guide →</a></p></div></div>
+    <div class="action-item"><div class="action-num">4</div><div><h4>Are you solving the actual problem?</h4><p>Poor cooling can also come from ducts, airflow, insulation, undersized returns, sizing, or thermostat/control issues — not just the equipment itself.</p></div></div>
   </div>
-  <div class="center-cta"><a class="btn btn-ghost" href="guides/austin-hvac-permit-guide.html">Read the full Austin HVAC Permit Guide →</a></div>
+  <div class="center-cta"><a class="btn btn-primary" href="#risk-check">Start My Free AC Risk Check →</a></div>
 </div></section>
 
-<section id="cost-intelligence" class="section marketing-section"><div class="container">
-  <div class="building-card">
-    <div><span class="status-chip status-building">Building</span><h3>Austin HVAC cost &amp; provider intelligence</h3><p>We're building a scope-normalized Austin HVAC pricing dataset — separating equipment, tonnage, ductwork, electrical work and permits instead of one wide "commercial range." We're doing the same for provider verification: licensing, insurance, warranties and quote completeness, not just star ratings.</p><p style="color:#c8d8d2;font-size:12.5px">No prices or vendors are fabricated in this build. When a number appears here, it will disclose sample size, time window and methodology.</p><a class="btn btn-primary" href="data/">See the data layer we're building →</a></div>
-    <ul class="building-list">
-      <li>Scope-normalized diagnostic, repair and replacement pricing</li>
-      <li>Verified Austin HVAC providers — licensing, insurance, service area</li>
-      <li>Quote-completeness checks: equipment, tonnage, SEER2, permits, warranty</li>
-      <li>Published methodology before any number goes live</li>
-    </ul>
+<section id="market-data" class="section marketing-section"><div class="container">
+  <div class="section-header"><div><span class="eyebrow">Austin HVAC market data</span><h2>What Austin homeowners are actually seeing.</h2></div><p>We normalize prices by scope. A basic 3-ton replacement isn't compared directly with a 5-ton high-efficiency system that also includes ductwork and electrical work.</p></div>
+  <div class="live-dashboard">
+    <article class="dashboard-card"><small>DIAGNOSTIC / SERVICE CALLS</small><h3>Coming soon</h3><div class="dashboard-value">—</div><p>We don't have a verified, scope-normalized Austin figure yet.</p><div class="source-time"><span>Status: not yet verified</span></div></article>
+    <article class="dashboard-card"><small>COMMON AC REPAIRS</small><h3>Coming soon</h3><div class="dashboard-value">—</div><p>Repair pricing varies too much by component to publish one range responsibly today.</p><div class="source-time"><span>Status: not yet verified</span></div></article>
+    <article class="dashboard-card"><small>FULL SYSTEM REPLACEMENT</small><h3>Coming soon</h3><div class="dashboard-value">—</div><p>We're building scope-normalized replacement pricing by tonnage and efficiency.</p><div class="source-time"><span>Status: not yet verified</span></div></article>
+    <article class="dashboard-card"><small>U.S. BUREAU OF LABOR STATISTICS</small><h3>Austin construction labor</h3><div class="dashboard-value">$27.53 / hour</div><p>Mean hourly wage for construction and extraction occupations in the Austin-Round Rock-San Marcos metro.</p><div class="source-time"><span>Data period: May 2025</span><span>Released: Aug 13, 2026</span></div></article>
+    <article class="dashboard-card"><small>CITY OF AUSTIN OPEN DATA</small><h3>Austin permit activity</h3><div class="dashboard-value">2.37M+ permit records</div><p>Building, electrical, mechanical and plumbing records span 1980-present, published as a daily-updated dataset.</p><div class="source-time"><span>Dataset period: 1980-present</span><span>Last checked: Aug 21, 2026</span></div></article>
   </div>
+  <div class="center-cta"><a class="btn btn-ghost" href="data/">See Austin HVAC Cost Data →</a> <a class="btn btn-ghost" href="hvac-pros.html">Browse HVAC Providers →</a></div>
 </div></section>
 
-<section id="choosing-a-provider" class="section white marketing-section"><div class="container">
-  <div class="section-header"><div><span class="eyebrow">If you want a professional opinion</span><h2>How we think about choosing an HVAC company in Austin.</h2></div><p>Reviews and star ratings alone don't confirm sizing, permits, scope or warranty. Here's what we look for.</p></div>
+<section id="how-we-evaluate" class="section white marketing-section"><div class="container">
+  <div class="section-header"><div><span class="eyebrow">If you need professional help</span><h2>How we evaluate an Austin HVAC company.</h2></div><p>Reviews and star ratings alone don't confirm sizing, permits, scope or warranty.</p></div>
   <div class="context-grid">
-    <div class="context-card"><span>🪪</span><h3>Licensing</h3><p>Properly licensed for HVAC work in Texas, with a verifiable license number.</p></div>
-    <div class="context-card"><span>🛡️</span><h3>Insurance</h3><p>Current liability and workers' comp coverage appropriate for the job.</p></div>
-    <div class="context-card"><span>📍</span><h3>Service area</h3><p>Actually services your part of the Austin metro, not just a listing that shows up everywhere.</p></div>
-    <div class="context-card"><span>📜</span><h3>Permit competency</h3><p>Pulls permits when the scope requires one, rather than treating it as optional.</p></div>
-    <div class="context-card"><span>🧾</span><h3>Quote completeness</h3><p>Equipment model, tonnage, SEER2, labor, disposal and warranty spelled out in writing.</p></div>
-    <div class="context-card"><span>🕒</span><h3>Emergency availability</h3><p>Clear about response times and after-hours service, if that matters to you.</p></div>
-    <div class="context-card"><span>⭐</span><h3>Reputation</h3><p>Reviews and complaint history considered alongside the items above — not instead of them.</p></div>
-    <div class="context-card"><span>🔧</span><h3>Warranty terms</h3><p>Parts and labor warranty length, and what voids it.</p></div>
+    <div class="context-card"><span>🪪</span><h3>Licensed</h3><p>A verifiable Texas HVAC license appropriate to the work.</p></div>
+    <div class="context-card"><span>🛡️</span><h3>Properly insured</h3><p>Relevant liability/business coverage appropriate to the project.</p></div>
+    <div class="context-card"><span>📍</span><h3>Actually serves your area</h3><p>Real service coverage, not merely a directory page targeting every ZIP.</p></div>
+    <div class="context-card"><span>📋</span><h3>Permit competent</h3><p>Understands when permits and inspections apply and includes them in the scope.</p></div>
+    <div class="context-card"><span>🧾</span><h3>Complete quotes</h3><p>Equipment model, capacity, SEER2, labor, permits, exclusions and warranty in writing.</p></div>
+    <div class="context-card"><span>🕒</span><h3>Clear availability</h3><p>Realistic scheduling and emergency-response information.</p></div>
+    <div class="context-card"><span>⭐</span><h3>Reputation with context</h3><p>Reviews and complaint history considered alongside credentials and scope.</p></div>
+    <div class="context-card"><span>🔧</span><h3>Warranty clarity</h3><p>What parts and labor are covered, for how long, and important exclusions.</p></div>
   </div>
-  <div class="section-mini-note">When your Action Plan suggests professional help, you can choose to have your property file sent to one participating provider — you decide, we don't share anything before that.</div>
+  <div class="center-cta"><small style="display:block;margin-bottom:10px;color:var(--muted)">Need help now?</small><a class="btn btn-primary" id="evaluateLeadCta" href="#lead-form">Have an HVAC Professional Contact Me →</a></div>
 </div></section>
 
-<section class="section white faq-section marketing-section"><div class="container">
+<section id="faq" class="section white faq-section marketing-section"><div class="container">
   <div class="section-header"><div><span class="eyebrow">FAQ</span><h2>Questions Austin homeowners actually ask about AC.</h2></div></div>
   <div class="faq-grid">
-    <details open><summary>How much does AC replacement cost in Austin?</summary><p>Total cost depends heavily on tonnage, equipment efficiency (SEER2), ductwork condition, electrical work and whether a permit is required — which is why wide national averages are hard to trust for a specific house. We're building a scope-normalized Austin pricing dataset instead of publishing a single number today; see the cost &amp; provider intelligence section above.</p></details>
-    <details><summary>Is $15,000 too much for HVAC replacement?</summary><p>It depends on what's actually included — system size and efficiency, ductwork changes, electrical upgrades, permits, thermostat and warranty terms — not just the final number. Ask your contractor to itemize each of those before comparing quotes.</p></details>
-    <details><summary>Should I repair or replace a 14-year-old AC?</summary><p>A commonly used industry guideline multiplies the system's age by the repair cost; a high result relative to full replacement cost tends to favor replacement. Repair history, efficiency and comfort complaints matter too. Our free AC Risk Check walks through this using your own numbers.</p></details>
-    <details><summary>Do I need a permit to replace my AC in Austin?</summary><p>A full system replacement generally requires a mechanical permit pulled by a licensed contractor. Straightforward like-for-like repairs typically don't require a separate permit, though scope and interpretation can vary. See our Austin HVAC Permit Guide for details.</p></details>
-    <details><summary>How do I choose an HVAC company in Austin?</summary><p>Reviews and star ratings alone don't confirm sizing, permits, scope or warranty. Check licensing, insurance, service area, permit competency, quote completeness, emergency availability and warranty terms — see our provider-selection criteria above.</p></details>
-    <details><summary>What should an AC repair cost?</summary><p>It depends on the failed component, whether refrigerant is involved, and labor time — a capacitor and a compressor are not comparable repairs. We're building scope-normalized Austin repair pricing rather than publishing an unverified range today.</p></details>
-    <details><summary>When should I service my AC?</summary><p>Most manufacturers recommend at least one professional service visit per year, ideally scheduled before peak Austin cooling season rather than during it.</p></details>
-    <details><summary>Why is my upstairs hotter than the rest of the house?</summary><p>Common causes include duct balancing issues, insulation differences, and undersized returns upstairs. It's worth describing to a technician specifically rather than assuming it's simply that heat rises.</p></details>
-    <details><summary>Why did my electric bill jump?</summary><p>Possible causes include seasonal heat, an aging or less efficient system, thermostat habits, or a developing mechanical issue. Our AC Risk Check helps narrow down which of those is most likely at your address.</p></details>
-    <details><summary>Is duct cleaning actually necessary?</summary><p>Not automatically. It depends on visible evidence such as debris, suspected mold or pest contamination — not a routine calendar. See our <a href="ducts.html">Duct Cleaning Check</a> and <a href="guides/do-austin-homes-need-air-duct-cleaning.html">duct cleaning guide</a> for when cleaning is actually justified.</p></details>
+    <details open><summary>Why is my AC running but not cooling?</summary><p>Common causes include a dirty filter or coil, low refrigerant, a failing capacitor or motor, blocked airflow, or a thermostat/control issue. Our free AC Risk Check walks through your symptoms to help narrow down what's most likely before you call anyone.</p></details>
+    <details><summary>Should I repair or replace an older AC?</summary><p>Don't let age alone decide it. Weigh repair cost, how often it's needed repairs, cooling performance, efficiency, remaining warranty and replacement cost together — see Before You Approve Work above.</p></details>
+    <details><summary>How long does a central AC usually last?</summary><p>Typically 15–18 years as a general reference range. Actual life varies with equipment, installation, climate, use and maintenance — it's a planning range, not a failure date.</p></details>
+    <details><summary>How much does AC replacement cost in Austin?</summary><p>It depends on tonnage, efficiency (SEER2), ductwork, electrical work and permits — which is why a single average is misleading. We're building a scope-normalized Austin pricing dataset; see the market data section above for current status.</p></details>
+    <details><summary>Is $15,000 too much for a new HVAC system?</summary><p>It depends on what's included — system size and efficiency, ductwork changes, electrical upgrades, permits, thermostat and warranty terms. Ask your contractor to itemize each before comparing quotes.</p></details>
+    <details><summary>How much electricity does an AC use in Austin?</summary><p>It depends on system size, efficiency, your home and how much you run it. We don't yet have verified local electricity-rate data to turn this into a dollar figure — see the calculator above for current status.</p></details>
+    <details><summary>Can regular AC maintenance actually save money?</summary><p>Airflow and maintenance problems can raise energy use for the same cooling output by roughly 15% in commonly cited estimates. That's a scenario, not a guaranteed savings number — actual savings depend on your system's current condition.</p></details>
+    <details><summary>Why is upstairs hotter than downstairs?</summary><p>Common causes include duct balancing, insulation differences, and undersized returns upstairs. Worth describing specifically to a technician rather than assuming it's simply that heat rises.</p></details>
+    <details><summary>Do I need duct cleaning if my AC isn't cooling?</summary><p>Not automatically — duct cleaning solves a specific set of problems (debris, contamination), not general cooling complaints. See our <a href="ducts.html">Duct Cleaning Check</a> for a symptom-based answer.</p></details>
+    <details><summary>Do I need a permit to replace my AC in Austin?</summary><p>A full system replacement generally requires a mechanical permit pulled by a licensed contractor. Straightforward like-for-like repairs typically don't. See our <a href="guides/austin-hvac-permit-guide.html">Austin HVAC Permit Guide</a> for details.</p></details>
+    <details><summary>How do I choose an HVAC company in Austin?</summary><p>Check licensing, insurance, whether they actually serve your area, permit competency, quote completeness, availability, reputation and warranty terms — see How We Evaluate an Austin HVAC Company above.</p></details>
+    <details><summary>Can I see my AC risk result without giving you my email?</summary><p>Yes. Right now you can see your initial risk result without an email. We may require one for full reports in the future, but it isn't required today.</p></details>
   </div>
 </div></section>
 
-<section class="section marketing-section"><div class="container">
-  <div class="section-header"><div><span class="eyebrow">Methodology</span><h2>Facts where we have them. Caution where we don't.</h2></div><p>A risk score should help you make a decision on your AC — not make it sound scarier than it is.</p></div>
-  <div class="method-grid">
-    <div class="method-card"><span>01</span><h3>Public facts</h3><p>NWS forecasts, City of Austin permit records and published mechanical/permit rules.</p></div>
-    <div class="method-card"><span>02</span><h3>Your information</h3><p>System age, symptoms, repair history and maintenance habits you tell us about.</p></div>
-    <div class="method-card"><span>03</span><h3>Estimates</h3><p>Potential costs or modeled values, disclosed as estimates rather than facts.</p></div>
-    <div class="method-card"><span>04</span><h3>Risk signals</h3><p>Rules and heuristics that help put AC issues in priority order — not a prediction of failure.</p></div>
-  </div>
-  <div class="method-message">A high score does not mean your AC will fail. A low score does not guarantee it's fine. When the evidence doesn't support urgent action, the right recommendation may be to <strong>watch it, maintain it, or do nothing for now.</strong></div>
-</div></section>
-
-<section class="section sources-section marketing-section"><div class="container">
-  <div class="source-layout">
-    <div><span class="eyebrow">Source-linked</span><h2>See where the AC context comes from.</h2><p>You should be able to check the sources behind advice about your system. Austin Home Intelligence uses public and trusted sources when they can improve your decision.</p><a class="btn btn-primary" href="data/">Explore Our Sources &amp; Data →</a></div>
-    <div class="source-wall" aria-label="Examples of Austin Home Intelligence sources"><span>City of Austin</span><span>Austin Development Services</span><span>National Weather Service</span><span>NOAA</span><span>Texas Department of Licensing and Regulation</span><span>U.S. Bureau of Labor Statistics</span><span>U.S. Census Bureau</span></div>
-  </div>
-</div></section>
-
-<section class="section white marketing-section"><div class="container"><div class="callout"><strong>What this tool can't do</strong><p>AHI helps prioritize what may deserve attention. We cannot remotely diagnose refrigerant levels, electrical faults, airflow, equipment condition or other conditions that require onsite testing. When professional evaluation is reasonable, we'll say so — and when it isn't, we'll say that too.</p></div></div></section>
-
-<section class="section final-home-cta marketing-section"><div class="container final-cta-inner"><span class="eyebrow">Start free</span><h2>Find out what your AC actually needs.</h2><p>You don't need to fix everything today. You just need to know what matters, what can wait, and where your next dollar will do the most good.</p><a class="btn btn-primary" href="#risk-check">Start My AC Risk Check →</a><small>A few quick questions now could help you avoid a much more expensive surprise later.</small></div></section>
+<section class="section final-home-cta marketing-section"><div class="container final-cta-inner"><span class="eyebrow">Start free</span><h2>See your AC risk result before you schedule anyone.</h2><p>You may not need someone at your house yet. Start with the free AC Risk Check to see what deserves attention, what may be worth monitoring, and when getting a professional opinion makes sense.</p><a class="btn btn-primary" href="#risk-check">Start My Free AC Risk Check →</a><small>About 2 minutes · No email required for your initial result · No home visit<br>If you've been meaning to check your AC, this is a good time to do it while the initial risk result is still ungated.</small></div></section>
 
 </main>
 <div class="sticky-cta-bar"><a class="btn btn-primary" href="#risk-check">Start My AC Risk Check →</a></div>
 <footer class="footer"><div class="container"><div class="legal" style="border:0;margin:0;padding:0;text-align:center">© <span data-year></span> Austin Home Intelligence • <a style="display:inline" href="privacy.html">Privacy</a> • <a style="display:inline" href="disclaimer.html">Disclaimer</a></div></div></footer>
-<script src="assets/config.js"></script><script src="assets/site.js"></script><script src="assets/authority.js"></script><script src="assets/property-data.js"></script><script src="assets/tools.js"></script></body></html>
+<script src="assets/config.js"></script><script src="assets/site.js"></script><script src="assets/authority.js"></script><script src="assets/property-data.js"></script><script src="assets/lead-form.js"></script><script src="assets/hvac-calculator.js"></script><script src="assets/tools.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  AHILeadForm.mount(document.getElementById('hvac-lead-mount'), AHILeadForm.configs.hvac);
+  AHICalculator.mount(document.getElementById('hvac-calc-mount'), HVAC_CALC_CONFIG);
+  document.getElementById('evaluateLeadCta').addEventListener('click', function(e){
+    e.preventDefault();
+    AHILeadForm.focusOrScroll(document.getElementById('lead-form'));
+  });
+});
+</script>
+</body></html>
