@@ -41,6 +41,8 @@ const LEAD_FORM_CONFIGS = {
     ],
     systemTypes: ['Central AC','Heat pump','Packaged system','Not sure'],
     systemAges: ['Under 5 years','5–10 years','10–15 years','15+ years','Not sure'],
+    symptomTags: ['Weak airflow upstairs','Longer run times','Higher electric bill','Strange noise','Water near the unit','Nothing specific'],
+    repairPreferences: ['Repair if reasonable','Open to replacement if needed','Not sure yet'],
     matchCounts: [
       {
         value:1, label:'One contractor', kicker:'Keep it simple',
@@ -49,7 +51,7 @@ const LEAD_FORM_CONFIGS = {
         recommendWhen:['No AC / urgent']
       },
       {
-        value:3, label:'Three contractors', kicker:'Compare before you choose', badge:'Best for comparing quotes',
+        value:3, label:'Three contractors', kicker:'Compare before you choose', badge:'Recommended for bigger jobs',
         desc:'Hear from up to three vetted professionals so you can compare recommendations, availability and quotes.',
         bullets:['Replacement is being discussed','It’s an expensive repair','You want a second opinion','Scopes or quotes are very different'],
         recommendWhen:['Replacement','Second opinion']
@@ -66,6 +68,7 @@ const AHILeadForm = (function(){
     const state = {
       step: cfg.multiStep ? 1 : 0, // 0 = flat/non-stepped mode
       selectedWork: [],
+      selectedSymptoms: [],
       selectedMatch: cfg.matchCounts?.[0]?.value ?? null,
       submitted: false
     };
@@ -98,13 +101,19 @@ const AHILeadForm = (function(){
       const systemFieldsHtml = cfg.systemTypes ? `
         <div class="field"><label for="lf-systype-${cfg.service}">System type (optional)</label><select id="lf-systype-${cfg.service}" name="systemType"><option value="">Not sure</option>${cfg.systemTypes.map(s=>`<option>${esc(s)}</option>`).join('')}</select></div>
         <div class="field"><label for="lf-sysage-${cfg.service}">System age (optional)</label><select id="lf-sysage-${cfg.service}" name="systemAge"><option value="">Not sure</option>${cfg.systemAges.map(s=>`<option>${esc(s)}</option>`).join('')}</select></div>` : '';
+      const symptomFieldsHtml = cfg.symptomTags ? `
+        <div class="field"><label>What have you noticed? (optional)</label><div class="worktype-grid" id="lf-symptoms-${cfg.service}" role="group" aria-label="What have you noticed?">${cfg.symptomTags.map(s=>`<button type="button" class="worktype-chip symptom-chip${state.selectedSymptoms.includes(s)?' selected':''}" aria-pressed="${state.selectedSymptoms.includes(s)}">${esc(s)}</button>`).join('')}</div></div>` : '';
+      const preferenceFieldHtml = cfg.repairPreferences ? `
+        <div class="field"><label for="lf-pref-${cfg.service}">Repair or replace? (optional)</label><select id="lf-pref-${cfg.service}" name="repairPreference"><option value="">Not sure yet</option>${cfg.repairPreferences.map(s=>`<option>${esc(s)}</option>`).join('')}</select></div>` : '';
       return `
         <div class="field"><label for="lf-name-${cfg.service}">Name</label><input id="lf-name-${cfg.service}" name="name" autocomplete="name" required></div>
         <div class="field"><label for="lf-phone-${cfg.service}">Phone</label><input id="lf-phone-${cfg.service}" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
         <div class="field"><label for="lf-address-${cfg.service}">Address or ZIP</label><input id="lf-address-${cfg.service}" name="address" autocomplete="postal-code" placeholder="78704 or full address" required></div>
         <div class="field"><label for="lf-timing-${cfg.service}">Urgency / preferred timing</label><select id="lf-timing-${cfg.service}" name="timing"><option>As soon as possible</option><option>This week</option><option>This month</option><option>Just researching</option></select></div>
         ${systemFieldsHtml}
-        <div class="field"><label for="lf-note-${cfg.service}">Anything else? (optional)</label><textarea id="lf-note-${cfg.service}" name="note" rows="3" placeholder="Symptoms, recent repairs, or anything else worth mentioning"></textarea></div>
+        ${symptomFieldsHtml}
+        ${preferenceFieldHtml}
+        <div class="field"><label for="lf-note-${cfg.service}">Anything else? (optional)</label><textarea id="lf-note-${cfg.service}" name="note" rows="3" placeholder="Recent repairs, or anything else worth mentioning"></textarea></div>
         <div class="lead-disclosure"><strong>Free for Austin homeowners — currently, no obligation.</strong> Some participating contractors may pay Austin Home Intelligence for introductions. Payment does not improve a company's vetting status. We share your request only with the ${state.selectedMatch||'company/companies'} you chose.</div>
         <button class="btn btn-primary lead-submit-btn" type="submit">${submitLabel()}</button>
         <div class="lead-form-status" aria-live="polite"></div>`;
@@ -126,7 +135,7 @@ const AHILeadForm = (function(){
       if(state.submitted){ el.innerHTML = successHtml(); return }
       if(!cfg.multiStep){
         el.innerHTML = `${workTypeGridHtml()}${matchGridHtml()}<form class="lead-contact-form${state.selectedWork.length?'':' hidden'}" novalidate>${contactFieldsHtml()}</form>`;
-        wireWorktype(); wireMatch(); wireForm();
+        wireWorktype(); wireMatch(); wireForm(); wireSymptoms();
         return;
       }
       // multi-step
@@ -142,7 +151,7 @@ const AHILeadForm = (function(){
       } else {
         el.innerHTML = `${progressHtml(totalSteps)}<form class="lead-contact-form" novalidate><div class="actions" style="margin-top:0;margin-bottom:8px"><button type="button" class="btn btn-ghost" id="lf-back3">← Back</button><span></span></div>${contactFieldsHtml()}</form>`;
         document.getElementById('lf-back3').onclick = ()=>{ state.step = cfg.matchCounts?2:1; render() };
-        wireForm();
+        wireForm(); wireSymptoms();
       }
     }
 
@@ -162,6 +171,18 @@ const AHILeadForm = (function(){
         c.onclick=()=>{ state.selectedMatch = Number(c.dataset.value); render() };
       });
     }
+    function wireSymptoms(){
+      el.querySelectorAll('.symptom-chip').forEach(b=>{
+        b.classList.toggle('selected', state.selectedSymptoms.includes(b.textContent));
+        b.setAttribute('aria-pressed', state.selectedSymptoms.includes(b.textContent));
+        b.onclick=()=>{
+          const label = b.textContent;
+          const idx = state.selectedSymptoms.indexOf(label);
+          if(idx>-1) state.selectedSymptoms.splice(idx,1); else state.selectedSymptoms.push(label);
+          b.classList.toggle('selected'); b.setAttribute('aria-pressed', state.selectedSymptoms.includes(label));
+        };
+      });
+    }
     function wireForm(){
       const form = el.querySelector('.lead-contact-form');
       if(!form) return;
@@ -175,6 +196,8 @@ const AHILeadForm = (function(){
           if(form.systemType.value) answers.systemType = form.systemType.value;
           if(form.systemAge.value) answers.systemAge = form.systemAge.value;
         }
+        if(cfg.symptomTags && state.selectedSymptoms.length) answers.symptoms = state.selectedSymptoms;
+        if(cfg.repairPreferences && form.repairPreference.value) answers.repairPreference = form.repairPreference.value;
         const payload = {
           type:'service_lead', service:cfg.service, tool:cfg.service,
           firstName: form.name.value.trim(), phone: form.phone.value.trim(),
