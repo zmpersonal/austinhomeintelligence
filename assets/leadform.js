@@ -7,7 +7,7 @@
  *   secondary lead form.
  * - Multi-step (cfg.multiStep = true): the same three groups rendered as
  *   separate steps with a progress indicator and Back/Continue navigation.
- *   Used by the contractor-finder template (hvac-pros.html), where this
+ *   Used by the contractor-finder template (hvacpros.html), where this
  *   form IS the primary conversion path.
  *
  * Submits through the same worker endpoint and payload shape tools.js
