@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-23T10:39:04.526681+00:00",
-  "generated_at_display": "Aug 23, 2026 10:39 UTC",
+  "generated_at": "2026-08-24T10:52:48.821497+00:00",
+  "generated_at_display": "Aug 24, 2026 10:52 UTC",
   "location": "Austin, Texas",
   "window": "NWS forecast periods, approximately 7 days",
   "risks": {
@@ -13,7 +13,7 @@
       "level": "Low"
     },
     "rain": {
-      "value": "20% peak",
+      "value": "25% peak",
       "level": "Low"
     },
     "wind": {
