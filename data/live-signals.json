@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-14T16:21:52.559529+00:00",
-  "generated_at_display": "Sep 14, 2026 16:21 UTC",
+  "generated_at": "2026-09-15T14:59:52.323622+00:00",
+  "generated_at_display": "Sep 15, 2026 14:59 UTC",
   "location": "Austin, Texas",
   "window": "NWS forecast periods, approximately 7 days",
   "risks": {
@@ -17,7 +17,7 @@
       "level": "Low"
     },
     "wind": {
-      "value": "10 mph max",
+      "value": "15 mph max",
       "level": "Low"
     }
   },
