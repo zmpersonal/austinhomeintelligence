@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-23T15:00:25.921332+00:00",
-  "generated_at_display": "Sep 23, 2026 15:00 UTC",
+  "generated_at": "2026-09-24T15:04:37.331933+00:00",
+  "generated_at_display": "Sep 24, 2026 15:04 UTC",
   "location": "Austin, Texas",
   "window": "NWS forecast periods, approximately 7 days",
   "risks": {
@@ -9,11 +9,11 @@
       "level": "Elevated"
     },
     "freeze": {
-      "value": "75\u00b0F min",
+      "value": "69\u00b0F min",
       "level": "Low"
     },
     "rain": {
-      "value": "44% peak",
+      "value": "47% peak",
       "level": "Moderate"
     },
     "wind": {
