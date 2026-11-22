@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-11-21T17:29:33.368930+00:00",
-  "generated_at_display": "Nov 21, 2026 17:29 UTC",
+  "generated_at": "2026-11-22T17:48:35.349249+00:00",
+  "generated_at_display": "Nov 22, 2026 17:48 UTC",
   "location": "Austin, Texas",
   "window": "NWS forecast periods, approximately 7 days",
   "risks": {
     "heat": {
-      "value": "76\u00b0F max",
+      "value": "72\u00b0F max",
       "level": "Low"
     },
     "freeze": {
-      "value": "39\u00b0F min",
+      "value": "36\u00b0F min",
       "level": "Low"
     },
     "rain": {
-      "value": "47% peak",
+      "value": "35% peak",
       "level": "Moderate"
     },
     "wind": {
